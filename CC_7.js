@@ -58,3 +58,15 @@ function filterHighValueTransactions(transactions, filterFunction){
      console.log("High-Value Transactions:", result);
 }; // Created a higher order function that filters transactions over $1000 and logs it into the console
 filterHighValueTransactions(transactions, amount => amount > 1000); // High-Value Transactions: 1200, 3000, 2200
+
+// Task 7 Budget Tracker
+function createBudgetTracker(){
+    let balance = 0;
+    return function(expense) {
+        balance -= expense ;
+        console.log(`Current Balance: -$${Math.abs(balance)}`);
+    }; // Created a function to add expenses and keep a running balance
+};
+let budget = createBudgetTracker();
+budget(300); // Current Balance: -$300
+budget(200); // Current Balance: -$500
