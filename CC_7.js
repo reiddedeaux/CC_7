@@ -16,3 +16,15 @@ const calculateHourlyWage = function(salary, hoursPerWeek) {
 calculateHourlyWage(52000, 40); //Expected Output: $25.00
 calculateHourlyWage(75000, 35); //Expected Output: $41.21
 
+// Task 3 Customer Loyalty Discount
+const calculateLoyaltyDiscount = (amount, years)=> {
+    let discountRate;
+    if (years >= 5) discountRate =.15;
+    else if (years >= 3);
+    else discountRate = 0.05;
+    const disountedPrice = amount *(1 - discountRate);
+    console.log(`Discounted Price; $${disountedPrice.toFixed(2)}`);
+}; // Created an arrow function that applies a discount and logs it into the console
+calculateLoyaltyDiscount(100, 6); // Discounted Price: $85.00
+calculateLoyaltyDiscount(200, 2); //Discounted PRice: $190.00 
+
